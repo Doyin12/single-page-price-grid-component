@@ -1,0 +1,167 @@
+@import './mixins';
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: 'Karla', sans-serif;
+  background: hsl(204, 43%, 93%);
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20rem, 1fr));
+
+  width: 60%;
+  margin: 10rem auto 10rem;
+
+  box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, 0.2);
+
+  border-radius: .8rem;
+
+  @include phone {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: unset;
+
+    width: 80%;
+  }
+}
+
+.box {
+
+  &__1 {
+    grid-column: 1/ span 2;
+    padding: 4rem 4rem;
+    background: #fff;
+
+    @include phone {
+      grid-column: unset;
+      padding: 3rem 2rem;
+    }
+
+    &-text {
+      color: hsl(218, 22%, 67%);
+      font-size: 2rem;
+      margin: 0 0 2rem;
+
+      @include phone {
+       font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__2 {
+    background: hsl(179, 62%, 43%);
+
+    padding:4rem 4rem;
+
+    @include phone {
+      grid-column: unset;
+      padding: 3rem 2rem;
+    }
+
+    &-text {
+      font-size: 2rem;
+
+      @include phone {
+        font-size: 1.8rem;
+       }
+    }
+
+    &-btn {
+      padding: 1rem 2rem;
+      width: 75%;
+
+      font-size: 2.5rem;
+      color: #fff;
+      font-weight: 700;
+      text-align: center;
+
+      background:  hsl(71, 73%, 54%);
+      border: none;
+      margin: 3rem 0;
+    }
+  }
+
+  &__3 {
+    background: hsla(179, 62%, 43%, 0.801);
+    padding: 4rem 4rem;
+
+    @include phone {
+      grid-column: unset;
+      padding: 3rem 2rem;
+    }
+    
+
+    &-list {
+      font-size: 1.7rem;
+      opacity: 70%;
+      margin-top: 2rem;
+
+      line-height: 2.5rem;
+    }
+  }
+}
+
+.heading-1 {
+  color: hsl(179, 62%, 43%);
+  font-size: 3.5rem;
+
+  @include phone {
+   font-size: 2.2rem;
+  }
+
+  &__white {
+    font-size: 2.5rem;
+
+    @include phone {
+      font-size: 2.2rem;
+     }
+  }
+}
+
+.heading-2 {
+  color:  hsl(71, 73%, 54%);
+  font-size: 2.3rem;
+  margin: 2rem 0;
+
+  @include phone {
+   font-size: 1.5rem;
+  }
+
+  &__white {
+    font-size: 3.5rem;
+    margin: 2rem 0;
+  }
+}
+
+.month {
+  font-size: 2rem;
+  color: #fff;
+  opacity: 60%;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
