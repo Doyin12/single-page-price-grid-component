@@ -104,6 +104,9 @@ li {
   background: #c0df34;
   border: none;
   margin: 3rem 0;
+  -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
 }
 
 .box__3 {
